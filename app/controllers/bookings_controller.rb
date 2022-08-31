@@ -57,7 +57,7 @@ class BookingsController < ApplicationController
     @booking.destroy
 
     respond_to do |format|
-      format.html { redirect_to bookings_url, notice: "Booking was successfully destroyed." }
+      format.html { redirect_to all_properties_path, notice: "Booking was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -70,6 +70,6 @@ class BookingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def booking_params
-      params.require(:booking).permit(:price, :start_date, :end_date, :property_id)
+      params.require(:booking).permit(:price, :start_date,:staus, :end_date, :property_id)
     end
 end

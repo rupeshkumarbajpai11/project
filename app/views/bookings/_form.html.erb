@@ -21,7 +21,12 @@
     <%= form.label :end_date, style: "display: block" %>
     <%= form.date_field :end_date %>
   </div>
-  
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.check_box :status %>
+  </div>
+
   <div>
   
     <%= form.hidden_field :property_id,value: params[:property_id] %>

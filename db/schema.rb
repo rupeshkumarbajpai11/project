@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_25_113022) do
     t.integer "price"
     t.date "start_date"
     t.date "end_date"
-    t.boolean "satuts"
+    t.boolean "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false

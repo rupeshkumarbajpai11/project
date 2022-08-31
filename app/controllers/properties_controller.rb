@@ -25,7 +25,7 @@ class PropertiesController < ApplicationController
   end
 
   def all_property
-
+  
   @properties = Property.all
   end
 

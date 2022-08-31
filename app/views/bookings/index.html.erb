@@ -6,7 +6,7 @@
   <% @bookings.each do |booking| %>
     <%= render booking %>
     <p>
-      <%= link_to "Show this booking", all_bookings_property_path %>
+      <%= link_to "Show this booking", @booking %>
     </p>
   <% end %>
 </div>
