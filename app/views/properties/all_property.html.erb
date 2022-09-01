@@ -21,7 +21,7 @@
       <td><%=property.latitude%></td>
       <td><%=property.longitude%></td>
       <td><%=property.price%></td>
-      <td> <%= link_to "Booking", new_booking_path(property_id: property.id)%> </td>
+      <td> <%= link_to "Available For Booking", new_booking_path(property_id: property.id)%> </td>
     </tr> 
   </tbody>
   <% end %>

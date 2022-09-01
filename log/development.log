@@ -17361,3 +17361,1312 @@ Processing by PropertiesController#all_property as TURBO_STREAM
 Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 5855)
 
 
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:44:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 27 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering homes/index.html.erb within layouts/application
+  Rendered homes/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 374)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | Allocations: 35828)
+Completed 200 OK in 66ms (Views: 46.5ms | ActiveRecord: 3.1ms | Allocations: 54484)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-01 14:44:07 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 27 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 4869)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:44:07 +0530
+Processing by HomesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 371)
+
+
+Started GET "/users/sign_in.turbo_stream" for 127.0.0.1 at 2022-09-01 14:44:07 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 931)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:44:07 +0530
+Processing by HomesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:44:07 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 851)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3926)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6304)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 7638)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:44:18 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"c2@c2", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'c2@c2' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 25 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/all_properties
+Completed 302 Found in 297ms (ActiveRecord: 3.5ms | Allocations: 20807)
+
+
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 14:44:18 +0530
+Processing by PropertiesController#all_property as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/all_property.html.erb within layouts/application
+  [1m[36mProperty Load (0.4ms)[0m  [1m[34mSELECT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/all_property.html.erb:16
+  Rendered properties/all_property.html.erb within layouts/application (Duration: 7.9ms | Allocations: 5744)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 8306)
+Completed 200 OK in 24ms (Views: 9.8ms | ActiveRecord: 2.3ms | Allocations: 12611)
+
+
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:44:25 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 3.7ms | Allocations: 2028)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2357)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4870)
+Completed 200 OK in 21ms (Views: 8.5ms | ActiveRecord: 2.5ms | Allocations: 13442)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-09-01 14:44:33 +0530
+Processing by BookingsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-02", "end_date"=>"2022-09-09", "status"=>"1"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :status. Context: { controller: BookingsController, action: create, request: #<ActionDispatch::Request:0x00007fabc488b9a0>, params: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-02", "end_date"=>"2022-09-09", "status"=>"1"}, "commit"=>"Create Booking", "controller"=>"bookings", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 2.0ms | Allocations: 1653)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1755)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4165)
+Completed 422 Unprocessable Entity in 18ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 14432)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-01 14:46:36 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1771)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:46:36 +0530
+Processing by HomesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in.turbo_stream" for 127.0.0.1 at 2022-09-01 14:46:36 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 821)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:46:36 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:46:36 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 142)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3578)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 4266)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:46:46 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"c2@c2", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'c2@c2' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 25 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/all_properties
+Completed 302 Found in 292ms (ActiveRecord: 1.0ms | Allocations: 3193)
+
+
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 14:46:47 +0530
+Processing by PropertiesController#all_property as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/all_property.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/all_property.html.erb:16
+  Rendered properties/all_property.html.erb within layouts/application (Duration: 1.4ms | Allocations: 937)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3389)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 4894)
+
+
+Started GET "/bookings/new?property_id=6" for 127.0.0.1 at 2022-09-01 14:46:52 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 1.2ms | Allocations: 1140)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1242)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3670)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 5176)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-09-01 14:47:04 +0530
+Processing by BookingsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-16", "end_date"=>"2022-09-24", "status"=>"0"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+[31mUnpermitted parameter: :status. Context: { controller: BookingsController, action: create, request: #<ActionDispatch::Request:0x00007fabc4a359e0>, params: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-16", "end_date"=>"2022-09-24", "status"=>"0"}, "commit"=>"Create Booking", "controller"=>"bookings", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 2.2ms | Allocations: 1556)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1658)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4069)
+Completed 422 Unprocessable Entity in 12ms (Views: 5.6ms | ActiveRecord: 0.8ms | Allocations: 8256)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-01 14:47:07 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1796)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:47:07 +0530
+Processing by HomesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/users/sign_in.turbo_stream" for 127.0.0.1 at 2022-09-01 14:47:07 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 832)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/bookings/new?property_id=6" for 127.0.0.1 at 2022-09-01 14:47:07 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"6"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:47:07 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 142)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3578)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4283)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings`[0m
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:55:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 16.0ms | Allocations: 4747)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5353)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 40602)
+Completed 200 OK in 86ms (Views: 57.3ms | ActiveRecord: 5.0ms | Allocations: 66199)
+
+
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:55:18 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 1.4ms | Allocations: 1140)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1242)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3671)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 5175)
+
+
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:55:18 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 1.4ms | Allocations: 1140)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1242)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3671)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 5185)
+
+
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 14:55:19 +0530
+Processing by PropertiesController#all_property as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/all_property.html.erb within layouts/application
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/all_property.html.erb:16
+  Rendered properties/all_property.html.erb within layouts/application (Duration: 7.2ms | Allocations: 5271)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 7811)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 2.3ms | Allocations: 12061)
+
+
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:55:24 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 1.3ms | Allocations: 1140)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1242)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3671)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 5185)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-09-01 14:55:37 +0530
+Processing by BookingsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-02", "end_date"=>"2022-09-04", "status"=>"0"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 1.8ms | Allocations: 1654)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1756)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4166)
+Completed 422 Unprocessable Entity in 14ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 12974)
+
+
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:56:45 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 6.5ms | Allocations: 5939)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 6266)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 9118)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 11345)
+
+
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 14:56:47 +0530
+Processing by PropertiesController#all_property as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/all_property.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/all_property.html.erb:16
+  Rendered properties/all_property.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3772)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 5814)
+
+
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:56:51 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 1.5ms | Allocations: 1225)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1327)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3746)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 5254)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-09-01 14:56:59 +0530
+Processing by BookingsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-02", "end_date"=>"2022-09-16", "status"=>"0", "property_id"=>"8"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mProperty Load (0.1ms)[0m  [1m[34mSELECT `properties`.* FROM `properties` WHERE `properties`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mBooking Create (0.4ms)[0m  [1m[32mINSERT INTO `bookings` (`price`, `start_date`, `end_date`, `status`, `created_at`, `updated_at`, `user_id`, `property_id`) VALUES (NULL, '2022-09-02', '2022-09-16', FALSE, '2022-09-01 09:26:59.453016', '2022-09-01 09:26:59.453016', 25, 8)[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+Redirected to http://127.0.0.1:3000/bookings/10
+Completed 302 Found in 14ms (ActiveRecord: 6.1ms | Allocations: 7151)
+
+
+Started GET "/bookings/10" for 127.0.0.1 at 2022-09-01 14:56:59 +0530
+Processing by BookingsController#show as TURBO_STREAM
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:68:in `set_booking'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/show.html.erb within layouts/application
+  Rendered bookings/_booking.html.erb (Duration: 0.6ms | Allocations: 259)
+  Rendered bookings/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3648)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 6399)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-01 14:57:12 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 3059)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:57:13 +0530
+Processing by HomesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 419)
+
+
+Started GET "/users/sign_in.turbo_stream" for 127.0.0.1 at 2022-09-01 14:57:13 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 901)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/bookings/10" for 127.0.0.1 at 2022-09-01 14:57:13 +0530
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"10"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:57:13 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 853)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2908)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5646)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 7118)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:57:23 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"c3@c3", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'c3@c3' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 26 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/all_properties
+Completed 302 Found in 306ms (ActiveRecord: 3.5ms | Allocations: 21747)
+
+
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 14:57:24 +0530
+Processing by PropertiesController#all_property as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/all_property.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/all_property.html.erb:16
+  Rendered properties/all_property.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3797)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.6ms | Allocations: 5894)
+
+
+Started GET "/bookings/new?property_id=8" for 127.0.0.1 at 2022-09-01 14:57:29 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 3.1ms | Allocations: 1703)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2029)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4530)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 6575)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-09-01 14:57:43 +0530
+Processing by BookingsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-09", "end_date"=>"2022-09-10", "status"=>"0", "property_id"=>"8"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mProperty Load (0.1ms)[0m  [1m[34mSELECT `properties`.* FROM `properties` WHERE `properties`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mBooking Create (0.2ms)[0m  [1m[32mINSERT INTO `bookings` (`price`, `start_date`, `end_date`, `status`, `created_at`, `updated_at`, `user_id`, `property_id`) VALUES (NULL, '2022-09-09', '2022-09-10', FALSE, '2022-09-01 09:27:43.282507', '2022-09-01 09:27:43.282507', 26, 8)[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+Redirected to http://127.0.0.1:3000/bookings/11
+Completed 302 Found in 14ms (ActiveRecord: 6.4ms | Allocations: 5025)
+
+
+Started GET "/bookings/11" for 127.0.0.1 at 2022-09-01 14:57:43 +0530
+Processing by BookingsController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:68:in `set_booking'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties` WHERE `properties`.`id` = 8 LIMIT 1[0m
+  ↳ app/views/bookings/_booking.html.erb:4
+  Rendered bookings/_booking.html.erb (Duration: 1.9ms | Allocations: 918)
+  Rendered bookings/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1668)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4079)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 6136)
+
+
+Started DELETE "/bookings/11" for 127.0.0.1 at 2022-09-01 14:57:49 +0530
+Processing by BookingsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:68:in `set_booking'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:57:in `destroy'
+  [1m[36mBooking Destroy (0.2ms)[0m  [1m[31mDELETE FROM `bookings` WHERE `bookings`.`id` = 11[0m
+  ↳ app/controllers/bookings_controller.rb:57:in `destroy'
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:57:in `destroy'
+Redirected to http://127.0.0.1:3000/all_properties
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms | Allocations: 3428)
+
+
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 14:57:49 +0530
+Processing by PropertiesController#all_property as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/all_property.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/all_property.html.erb:16
+  Rendered properties/all_property.html.erb within layouts/application (Duration: 1.3ms | Allocations: 936)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3384)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 4887)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-01 14:57:53 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 26 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1771)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:57:53 +0530
+Processing by HomesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 280)
+
+
+Started GET "/users/sign_in.turbo_stream" for 127.0.0.1 at 2022-09-01 14:57:53 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 817)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 14:57:53 +0530
+Processing by PropertiesController#all_property as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 281)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:57:53 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 142)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 3578)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4272)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:58:05 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"p1@p1", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'p1@p1' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 28 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `after_sign_in_path_for'
+  [1m[36mCACHE Role Load (0.0ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 28 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/properties
+Completed 302 Found in 298ms (ActiveRecord: 1.1ms | Allocations: 3794)
+
+
+Started GET "/properties" for 127.0.0.1 at 2022-09-01 14:58:05 +0530
+Processing by PropertiesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 28 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.5ms)[0m  [1m[34mSELECT `properties`.* FROM `properties` WHERE `properties`.`user_id` = 28[0m
+  ↳ app/views/properties/index.html.erb:6
+  Rendered properties/_property.html.erb (Duration: 0.6ms | Allocations: 281)
+  Rendered properties/_property.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered properties/_property.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered properties/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2466)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 4895)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.8ms | Allocations: 7301)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-01 14:58:21 +0530
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 28 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 1771)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-01 14:58:21 +0530
+Processing by HomesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Started GET "/users/sign_in.turbo_stream" for 127.0.0.1 at 2022-09-01 14:58:21 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 831)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/properties" for 127.0.0.1 at 2022-09-01 14:58:21 +0530
+Processing by PropertiesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 295)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-01 14:58:21 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 142)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3578)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 4269)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-01 15:00:40 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"p1@p1", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'p1@p1' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE `users` SET `users`.`remember_created_at` = '2022-09-01 09:30:40.624523', `users`.`updated_at` = '2022-09-01 09:30:40.624805' WHERE `users`.`id` = 28[0m
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 28 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `after_sign_in_path_for'
+  [1m[36mCACHE Role Load (0.0ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 28 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:12:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/properties
+Completed 302 Found in 299ms (ActiveRecord: 6.9ms | Allocations: 7056)
+
+
+Started GET "/properties" for 127.0.0.1 at 2022-09-01 15:00:40 +0530
+Processing by PropertiesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 28 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/index.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties` WHERE `properties`.`user_id` = 28[0m
+  ↳ app/views/properties/index.html.erb:6
+  Rendered properties/_property.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered properties/_property.html.erb (Duration: 0.0ms | Allocations: 28)
+  Rendered properties/_property.html.erb (Duration: 0.0ms | Allocations: 28)
+  Rendered properties/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1164)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3593)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 5256)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-09-01 15:14:03 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 23ms (ActiveRecord: 3.0ms | Allocations: 16373)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-01 15:14:03 +0530
+Processing by HomesController#index as TURBO_STREAM
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 422)
+
+
+Started GET "/users/sign_in.turbo_stream" for 127.0.0.1 at 2022-09-01 15:14:03 +0530
+Processing by Devise::SessionsController#new as TURBO_STREAM
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms | Allocations: 924)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+responders (3.0.1) lib/action_controller/respond_with.rb:215:in `respond_with'
+devise (4.8.1) app/controllers/devise/sessions_controller.rb:14:in `new'
+actionpack (7.0.3.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.3.1) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.3.1) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.3.1) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.3.1) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.3.1) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.3.1) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.3.1) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.3.1) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.3.1) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.3.1) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.3.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.3.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.3.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.3.1) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.4) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.4) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.4) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/cookies.rb:697:in `call'
+activerecord (7.0.3.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.3.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.3.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `block in tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:38:in `tagged'
+activesupport (7.0.3.1) lib/active_support/tagged_logging.rb:114:in `tagged'
+railties (7.0.3.1) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.3.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 15:14:03 +0530
+Processing by PropertiesController#all_property as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 366)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-09-01 15:14:03 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 857)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3956)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 38846)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms | Allocations: 40392)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-09-01 15:14:09 +0530
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"c2@c2", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'c2@c2' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `roles_users` ON `roles`.`id` = `roles_users`.`role_id` WHERE `roles_users`.`user_id` = 25 ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/application_controller.rb:10:in `after_sign_in_path_for'
+Redirected to http://127.0.0.1:3000/all_properties
+Completed 302 Found in 312ms (ActiveRecord: 3.3ms | Allocations: 20785)
+
+
+Started GET "/all_properties" for 127.0.0.1 at 2022-09-01 15:14:09 +0530
+Processing by PropertiesController#all_property as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering properties/all_property.html.erb within layouts/application
+  [1m[36mProperty Load (0.3ms)[0m  [1m[34mSELECT `properties`.* FROM `properties`[0m
+  ↳ app/views/properties/all_property.html.erb:16
+  Rendered properties/all_property.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5796)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 8350)
+Completed 200 OK in 17ms (Views: 9.9ms | ActiveRecord: 2.4ms | Allocations: 12573)
+
+
+Started GET "/bookings/new?property_id=11" for 127.0.0.1 at 2022-09-01 15:14:15 +0530
+Processing by BookingsController#new as HTML
+  Parameters: {"property_id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/new.html.erb within layouts/application
+  Rendered bookings/_form.html.erb (Duration: 3.5ms | Allocations: 2256)
+  Rendered bookings/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2585)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5087)
+Completed 200 OK in 19ms (Views: 8.5ms | ActiveRecord: 2.0ms | Allocations: 13630)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2022-09-01 15:14:23 +0530
+Processing by BookingsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "booking"=>{"start_date"=>"2022-09-02", "end_date"=>"2022-09-03", "status"=>"0", "property_id"=>"11"}, "commit"=>"Create Booking"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties` WHERE `properties`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mBooking Create (0.4ms)[0m  [1m[32mINSERT INTO `bookings` (`price`, `start_date`, `end_date`, `status`, `created_at`, `updated_at`, `user_id`, `property_id`) VALUES (NULL, '2022-09-02', '2022-09-03', FALSE, '2022-09-01 09:44:23.437388', '2022-09-01 09:44:23.437388', 25, 11)[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:32:in `block in create'
+Redirected to http://127.0.0.1:3000/bookings/15
+Completed 302 Found in 16ms (ActiveRecord: 6.2ms | Allocations: 9545)
+
+
+Started GET "/bookings/15" for 127.0.0.1 at 2022-09-01 15:14:23 +0530
+Processing by BookingsController#show as TURBO_STREAM
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 25 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT `bookings`.* FROM `bookings` WHERE `bookings`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/bookings_controller.rb:68:in `set_booking'
+  Rendering layout layouts/application.html.erb
+  Rendering bookings/show.html.erb within layouts/application
+  [1m[36mProperty Load (0.2ms)[0m  [1m[34mSELECT `properties`.* FROM `properties` WHERE `properties`.`id` = 11 LIMIT 1[0m
+  ↳ app/views/bookings/_booking.html.erb:4
+  Rendered bookings/_booking.html.erb (Duration: 2.3ms | Allocations: 932)
+  Rendered bookings/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1899)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4311)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 7026)
+
+
